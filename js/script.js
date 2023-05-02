@@ -12,16 +12,16 @@ function calculate() {
 
   if (isNaN(age)) {
   } else if (age >= 17) {
-    document.getElementById("area").innerHTML =
+    document.getElementById("age-restriction").innerHTML =
       "<p>You can see an R rated movie alone.</p>"
   } else if (age >= 13) {
-    document.getElementById("area").innerHTML =
+    document.getElementById("age-restriction").innerHTML =
       "<p>You can see a PG-13 movie alone.</p>"
   } else if (age >= 6) {
-    document.getElementById("area").innerHTML =
+    document.getElementById("age-restriction").innerHTML =
       "<p>You can see a G or PG movie alone.</p>"
   } else {
-    document.getElementById("area").innerHTML =
+    document.getElementById("age-restriction").innerHTML =
       "<p>You're too young to see anything.</p>"
   }
 }
