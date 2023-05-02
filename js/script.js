@@ -7,18 +7,21 @@
 "use strict"
 
 function calculate() {
-// input
-const age = prompt('Enter your age:')
+  const ageInput = document.getElementById("age").value
+  const age = parseFloat(ageInput)
 
-// process and output
-if (age >= 18) {
-  console.log('You can see an R rated movie by yourself')
-} else if (age >= 13) {
-  console.log('You can see a PG movie by youself')
-} else if (age >= 5) {
-  console.log('You can see a G or PG movie by yourself' )
-} else {
-   console.log('You are too young for anything')
+  if (isNaN(age)) {
+  } else if (age >= 17) {
+    document.getElementById("area").innerHTML =
+      "<p>You can see an R rated movie alone.</p>"
+  } else if (age >= 13) {
+    document.getElementById("area").innerHTML =
+      "<p>You can see a PG-13 movie alone.</p>"
+  } else if (age >= 6) {
+    document.getElementById("area").innerHTML =
+      "<p>You can see a G or PG movie alone.</p>"
+  } else {
+    document.getElementById("area").innerHTML =
+      "<p>You're too young to see anything.</p>"
+  }
 }
-
-console.log('\nDone.') 
