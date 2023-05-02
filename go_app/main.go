@@ -16,15 +16,16 @@ func main() {
 	fmt.Scanln(&ageInput)
 
 	age, err := strconv.ParseFloat(ageInput, 64)
-	if err != nil {
+	switch {
+	case err != nil:
 		fmt.Println("Invalid input, please enter a number.")
-	} else if age >= 17 {
+	case age >= 17:
 		fmt.Println("You can see an R rated movie alone.")
-	} else if age >= 13 {
+	case age >= 13:
 		fmt.Println("You can see a PG-13 movie alone.")
-	} else if age >= 6 {
+	case age >= 6:
 		fmt.Println("You can see a G or PG movie alone.")
-	} else {
+	default:
 		fmt.Println("You're too young to see anything.")
 	}
 }
